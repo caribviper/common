@@ -41,13 +41,29 @@ export class Utilities {
 	 * Checks to see if a number is numeric
 	 * @param n - item to be checked
 	*/
-  public isNumberValid(n: number): boolean { return typeof n === 'number' && !isNaN(n) && isFinite(n); }
+  public static isNumberValid(n: number): boolean { return typeof n === 'number' && !isNaN(n) && isFinite(n); }
+
+  /**
+	 * Checks to see if a number is numeric. Uses isNumberValid
+	 * @param n - item to be checked
+	*/
+  public static isNumeric(n: number) : boolean { return this.isNumberValid(n); }
+
+	/**
+	 * Checks if the passed item is a function
+	 * @param {any} x - parameter to be determined if function
+	 */
+  public static isFunction(x) {
+    if (!x) 
+      return false;
+    return Object.prototype.toString.call(x) === '[object Function]';
+  }
 
 	/**
 	 * Validates a date
 	 *@param d - item to be checked
 	*/
-  public isDate(d: any): boolean {
+  public static isDate(d: any): boolean {
     //checks to ensure it is a date object && //checks for a valid date
     return (Object.prototype.toString.call(d) === '[object Date]')
       && (!isNaN(d.getTime()));
@@ -58,7 +74,7 @@ export class Utilities {
 	 * @param start - start date of the date range
 	 * @param end - ending date of the date range
 	 */
-  public isDateRangeValid(start: Date, end: Date): boolean {
+  public static isDateRangeValid(start: Date, end: Date): boolean {
     //check dates
     if (this.isDate(start) && this.isDate(end) && (start.getTime() <= end.getTime())) {
       return true;
