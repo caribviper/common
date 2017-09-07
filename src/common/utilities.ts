@@ -68,4 +68,41 @@ export class Utilities {
     }
     return false;
   }
+
+  	/**
+	 * Joins path segments.  Preserves initial "/" and resolves ".." and "."
+	 * Does not support using ".." to go above/outside the root.
+	 * This means that join("foo", "../../bar") will not resolve to "../bar"
+	 * Source: creationix/path.js
+	 * Link: https://gist.github.com/creationix/7435851#file-path-js
+	 */
+	public join(...paths: any[]) : string {
+		// Split the inputs into a list of path commands.
+		let parts = [];
+		for (let i = 0, l = paths.length; i < l; i++) {
+			//added numeric checking
+			if (!isNaN(parseFloat(paths[i])) && isFinite(paths[i])) { //check for numbers
+				parts.push(paths[i]);
+			}
+			else {
+				parts = parts.concat(paths[i].split('/'));
+			}
+		}
+		// Interpret the path commands to get the new resolved path.
+		let newParts = [];
+		for (let i = 0, l = parts.length; i < l; i++) {
+			let part = parts[i];
+			// Remove leading and trailing slashes
+			// Also remove "." segments
+			if (!part || part === '.') continue;
+			// Interpret ".." to pop the last segment
+			if (part === '..') newParts.pop();
+			// Push new path segments.
+			else newParts.push(part);
+		}
+		// Preserve the initial slash if there was one.
+		if (parts[0] === '') newParts.unshift('');
+		// Turn back into a single string path.
+		return newParts.join('/') || (newParts.length ? '/' : '.');
+	}
 }
