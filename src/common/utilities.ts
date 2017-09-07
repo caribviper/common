@@ -76,7 +76,7 @@ export class Utilities {
 	 * Source: creationix/path.js
 	 * Link: https://gist.github.com/creationix/7435851#file-path-js
 	 */
-	public join(...paths: any[]) : string {
+	public static join(...paths: any[]) : string {
 		// Split the inputs into a list of path commands.
 		let parts = [];
 		for (let i = 0, l = paths.length; i < l; i++) {
