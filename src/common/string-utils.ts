@@ -40,4 +40,18 @@ export class StringUtilities {
 		}
 		return value;
   }
+
+  /**
+   * Truncates a string to be shown as an ellipse
+   * @param value Value to be truncated
+   * @param length Minimum length of the tuncated text to be shown
+   * @param showEllipseDots Specifies if to show the ellipose dots
+   */
+  public static ellipse(value: string, length: number = 10, showEllipseDots = true) {
+    if (value && typeof value === 'string') {
+      let ellipseDots = showEllipseDots ? '...' : '';
+			return value.length > length ? value.substring(0, length) + ellipseDots : value;
+		}
+		return value;
+  }
 }
