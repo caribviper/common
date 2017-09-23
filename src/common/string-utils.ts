@@ -15,7 +15,7 @@ export class StringUtilities {
    * @param seperator - Separator used to separate list
    * @param items - Items to be joined
    */
-  public join(seperator: string, ...items: string[]): string {
+  public static join(seperator: string, ...items: string[]): string {
     if (!items || items.length === 0)
       return '';
     return items.join(seperator);
@@ -25,7 +25,7 @@ export class StringUtilities {
    * Capitalize a given value of text.
    * @param value Value to be capitalize
    */
-  public capitalize(value: string) : string {
+  public static capitalize(value: string) : string {
     if (!!value && typeof value === 'string') {
 			let finalStr = '';
       value = value.toLowerCase();
