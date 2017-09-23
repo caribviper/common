@@ -20,4 +20,24 @@ export class StringUtilities {
       return '';
     return items.join(seperator);
   }
+
+  /**
+   * Capitalize a given value of text.
+   * @param value Value to be capitalize
+   */
+  public capitalize(value: string) : string {
+    if (!!value && typeof value === 'string') {
+			let finalStr = '';
+      value = value.toLowerCase();
+			let splitStr = value.split(' ');
+
+			for (let i = 0, len = splitStr.length; i < len; i++) {
+				let currentSplit = splitStr[i].charAt(0).toUpperCase() + splitStr[i].slice(1);
+				finalStr += currentSplit + ' ';
+			}
+
+			return finalStr;
+		}
+		return value;
+  }
 }
