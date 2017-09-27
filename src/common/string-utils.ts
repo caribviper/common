@@ -7,7 +7,9 @@ export class StringUtilities {
    * @param replacement Replacement text
    */
   public static replaceAll(target: string, search:string, replacement: string =''): string {
-    return target.replace(new RegExp(search, 'g'), replacement);
+    if(!!target)
+      return target.replace(new RegExp(search, 'g'), replacement);
+    return '';
   }
 
    /**
