@@ -104,5 +104,28 @@ export class Utilities {
 		if (parts[0] === '') newParts.unshift('');
 		// Turn back into a single string path.
 		return newParts.join('/') || (newParts.length ? '/' : '.');
-	}
+  }
+  
+  /**
+   * Sorts an array based on the passed properties. 
+   * Should be used for multiple field sorts.
+   * @param array Array to be sorted
+   * @param sortdetails Specifies sort details, which comprises of propertyName and sortDirection
+   */
+  public static sortBy<T>(array:T[], ...sortdetails: {propertyName: string, sortDirection: boolean}[]) : T[] {
+      var sortArguments = arguments;
+      return array.sort(function (objA, objB) {  
+          let result = 0;
+          for (let argIndex = 0; argIndex < sortdetails.length && result === 0; argIndex += 2) {
+  
+              let propertyName = sortdetails[argIndex].propertyName;
+              result = (objA[propertyName] < objB[propertyName]) ? -1 : (objA[propertyName] > objB[propertyName]) ? 1 : 0;
+  
+              //Reverse if sort order is false (DESC)
+              result *= !sortdetails[argIndex].sortDirection ? 1 : -1;
+          }
+          return result;
+      });
+  }
+
 }
