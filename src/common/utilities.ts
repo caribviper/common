@@ -110,9 +110,9 @@ export class Utilities {
    * Sorts an array based on the passed properties. 
    * Should be used for multiple field sorts.
    * @param array Array to be sorted
-   * @param sortdetails Specifies sort details, which comprises of propertyName and sortDirection
+   * @param sortdetails Specifies sort details, which comprises of propertyName and descending
    */
-  public static sortBy<T>(array:T[], ...sortdetails: {propertyName: string, sortDirection: boolean}[]) : T[] {
+  public static sortBy<T>(array:T[], ...sortdetails: {propertyName: string, descending: boolean}[]) : T[] {
       var sortArguments = arguments;
       return array.sort(function (objA, objB) {  
           let result = 0;
@@ -122,7 +122,7 @@ export class Utilities {
               result = (objA[propertyName] < objB[propertyName]) ? -1 : (objA[propertyName] > objB[propertyName]) ? 1 : 0;
   
               //Reverse if sort order is false (DESC)
-              result *= !sortdetails[argIndex].sortDirection ? 1 : -1;
+              result *= !sortdetails[argIndex].descending ? 1 : -1;
           }
           return result;
       });
