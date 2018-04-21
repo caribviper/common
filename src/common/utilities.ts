@@ -109,6 +109,8 @@ export class Utilities {
   /**
    * Sorts an array based on the passed properties. 
    * Should be used for multiple field sorts.
+   * Source: Stackoverflow
+   * Link: https://stackoverflow.com/questions/6129952/javascript-sort-array-by-two-fields
    * @param array Array to be sorted
    * @param sortdetails Specifies sort details, which comprises of propertyName and descending
    */
