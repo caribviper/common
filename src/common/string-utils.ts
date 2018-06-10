@@ -28,19 +28,21 @@ export class StringUtilities {
    * @param value Value to be capitalize
    */
   public static capitalize(value: string) : string {
-    if (!!value && typeof value === 'string') {
-			let finalStr = '';
-      value = value.toLowerCase();
-			let splitStr = value.split(' ');
+    // if (!!value && typeof value === 'string') {
+		// 	let finalStr = '';
+    //   value = value.toLowerCase();
+		// 	let splitStr = value.split(' ');
 
-			for (let i = 0, len = splitStr.length; i < len; i++) {
-				let currentSplit = splitStr[i].charAt(0).toUpperCase() + splitStr[i].slice(1);
-				finalStr += currentSplit + ' ';
-			}
+		// 	for (let i = 0, len = splitStr.length; i < len; i++) {
+		// 		let currentSplit = splitStr[i].charAt(0).toUpperCase() + splitStr[i].slice(1);
+		// 		finalStr += currentSplit + ' ';
+		// 	}
 
-			return finalStr;
-		}
-		return value;
+		// 	return finalStr;
+		// }
+    // return value;
+    value = value.toLowerCase();
+    return value.replace(/\b\w/g, function (m) { return m.toUpperCase(); });
   }
 
   /**
