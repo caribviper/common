@@ -1,6 +1,6 @@
 {
   "name": "caribviper-common",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Allows the utilisation of the common module",
   "main": "lib/index.js",
   "scripts": {
@@ -12,11 +12,11 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
-    "gulp-typescript": "^3.2.1",
+    "gulp-typescript": "^3.2.4",
     "gulp-uglify": "^3.0.0",
-    "merge2": "^1.1.0",
-    "pump": "^1.0.2",
-    "tslint": "^5.5.0",
-    "typescript": "^2.4.1"
+    "merge2": "^1.2.2",
+    "pump": "^1.0.3",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3"
   }
 }
