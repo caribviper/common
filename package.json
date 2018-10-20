@@ -9,14 +9,18 @@
   "author": "Kurtis Best <kurtis.best@gmail.com>",
   "license": "SEE LICENSE IN <licence.txt>",
   "typings": "lib/index.d.ts",
+  "repository": {
+    "type": "library",
+    "url": "https://github.com/caribviper/common"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "^1.4.0",
     "gulp-typescript": "^3.2.4",
-    "gulp-uglify": "^3.0.0",
-    "merge2": "^1.2.2",
+    "gulp-uglify": "^3.0.1",
+    "merge2": "^1.2.3",
     "pump": "^1.0.3",
-    "tslint": "^5.10.0",
-    "typescript": "^2.8.3"
+    "tslint": "^5.11.0",
+    "typescript": "^2.9.2"
   }
 }
