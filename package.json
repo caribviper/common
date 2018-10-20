@@ -1,7 +1,7 @@
 {
   "name": "caribviper-common",
   "version": "0.5.3",
-  "description": "Allows the utilisation of the common module",
+  "description": "Allows the utilisation of the common methods an assertion",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

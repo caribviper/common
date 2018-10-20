@@ -6,7 +6,7 @@ export class Assert {
    * @param message Error message to be generated
    * @param title Title/Category of error
    */
-  static isTrue(value: boolean, message: string, title: string = '') {
+  public static isTrue(value: boolean, message: string, title: string = '') {
     if (value !== true)
       throw new CategoryError(message, title);
   }
@@ -17,7 +17,7 @@ export class Assert {
    * @param message Error message to be generated
    * @param title Title/Category of error
    */
-  static isFalse(value: boolean, message: string, title: string = '') {
+  public static isFalse(value: boolean, message: string, title: string = '') {
     if (value !== false)
       throw new CategoryError(message, title);
   }
@@ -29,7 +29,7 @@ export class Assert {
    * @param message Error message to be generated
    * @param title Title/Category of error
    */
-  static isTruthy(value: any, message: string, title: string = '') {
+  public static isTruthy(value: any, message: string, title: string = '') {
     if (!value)
       throw new CategoryError(message, title);
   }
@@ -40,7 +40,7 @@ export class Assert {
    * @param message Error message to be generated
    * @param title Title/Category of error
    */
-  static isFalsey(value: any, message: string, title: string = '') {
+  public static isFalsey(value: any, message: string, title: string = '') {
     if (!!value)
       throw new CategoryError(message, title);
   }
@@ -51,7 +51,7 @@ export class Assert {
    * @param message Error message to be generated
    * @param title Title/Category of error
    */
-  static isNonEmptyArray(value: any[], message: string, title: string = '') {
+  public static isNonEmptyArray(value: any[], message: string, title: string = '') {
     if (!value && value.length > 0)
       throw new CategoryError(message, title);
   }
