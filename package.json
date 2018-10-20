@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kurtis Best <kurtis.best@gmail.com>",
-  "license": "SEE LICENSE IN <licence.txt>",
+  "license": "MIT",
   "typings": "lib/index.d.ts",
   "repository": {
     "type": "library",
