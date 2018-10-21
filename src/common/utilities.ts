@@ -40,7 +40,7 @@ export class Utilities {
 	 * Checks if the passed item is a function
 	 * @param {any} x - parameter to be determined if function
 	 */
-  public static isFunction(x) {
+  public static isFunction(x): boolean {
     if (!x) 
       return false;
     return Object.prototype.toString.call(x) === '[object Function]';
