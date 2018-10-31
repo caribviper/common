@@ -6,17 +6,17 @@ export class StringUtilities {
    * @param search Search text being replaced
    * @param replacement Replacement text
    */
-  public static replaceAll(target: string, search:string, replacement: string =''): string {
-    if(!!target)
+  public static replaceAll(target: string, search: string, replacement: string = ''): string {
+    if (!!target)
       return target.replace(new RegExp(search, 'g'), replacement);
     return '';
   }
 
-   /**
-   * Join a series of string separated by define character
-   * @param seperator - Separator used to separate list
-   * @param items - Items to be joined
-   */
+  /**
+  * Join a series of string separated by define character
+  * @param seperator - Separator used to separate list
+  * @param items - Items to be joined
+  */
   public static join(seperator: string, ...items: string[]): string {
     if (!items || items.length === 0)
       return '';
@@ -27,9 +27,12 @@ export class StringUtilities {
    * Capitalize a given value of text.
    * @param value Value to be capitalize
    */
-  public static capitalize(value: string) : string {
+  public static capitalize(value: string): string {
+    if (value && typeof value === 'string') {
     value = value.toLowerCase();
     return value.replace(/\b\w/g, function (m) { return m.toUpperCase(); });
+    }
+    return value;
   }
 
   /**
@@ -41,8 +44,8 @@ export class StringUtilities {
   public static ellipse(value: string, length: number = 10, showEllipseDots = true) {
     if (value && typeof value === 'string') {
       let ellipseDots = showEllipseDots ? '...' : '';
-			return value.length > length ? value.substring(0, length) + ellipseDots : value;
-		}
-		return value;
+      return value.length > length ? value.substring(0, length) + ellipseDots : value;
+    }
+    return value;
   }
 }
