@@ -1,18 +1,36 @@
 {
-  "name": "caribviper-common",
-  "version": "0.5.6",
+  "_from": "github:caribviper/common",
+  "_id": "caribviper-common@0.5.6",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/caribviper-common",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "caribviper-common@github:caribviper/common",
+    "name": "caribviper-common",
+    "escapedName": "caribviper-common",
+    "rawSpec": "github:caribviper/common",
+    "saveSpec": "github:caribviper/common",
+    "fetchSpec": null,
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "github:caribviper/common#dde89144dd625ad9646eb4c3f90bf2faa495296e",
+  "_spec": "caribviper-common@github:caribviper/common",
+  "_where": "C:\\Projects\\eplanning\\server-online\\node_modules_private",
+  "author": {
+    "name": "Kurtis Best",
+    "email": "kurtis.best@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/caribviper/common/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
   "description": "Allows the utilisation of the common methods an assertion",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Kurtis Best <kurtis.best@gmail.com>",
-  "license": "MIT",
-  "typings": "lib/index.d.ts",
-  "repository": {
-    "type": "library",
-    "url": "https://github.com/caribviper/common"
-  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-rename": "^1.4.0",
@@ -22,5 +40,18 @@
     "pump": "^1.0.3",
     "tslint": "^5.11.0",
     "typescript": "^2.9.2"
-  }
+  },
+  "homepage": "https://github.com/caribviper/common#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "caribviper-common",
+  "repository": {
+    "type": "library",
+    "url": "git+https://github.com/caribviper/common.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "typings": "lib/index.d.ts",
+  "version": "0.5.6"
 }
