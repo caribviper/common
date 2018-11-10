@@ -1,25 +1,32 @@
 {
+  "_args": [
+    [
+      "github:caribviper/common",
+      "C:\\Projects\\eplanning\\server-online\\node_modules_private"
+    ]
+  ],
   "_from": "github:caribviper/common",
-  "_id": "caribviper-common@0.5.6",
+  "_id": "caribviper-common@github:caribviper/common#dde89144dd625ad9646eb4c3f90bf2faa495296e",
   "_inBundle": false,
   "_integrity": "",
   "_location": "/caribviper-common",
   "_phantomChildren": {},
   "_requested": {
     "type": "git",
-    "raw": "caribviper-common@github:caribviper/common",
-    "name": "caribviper-common",
-    "escapedName": "caribviper-common",
+    "raw": "github:caribviper/common",
     "rawSpec": "github:caribviper/common",
     "saveSpec": "github:caribviper/common",
     "fetchSpec": null,
     "gitCommittish": null
   },
   "_requiredBy": [
-    "/"
+    "/",
+    "/caribviper-job-manager",
+    "/caribviper-pouchdb-repository",
+    "/eps-models"
   ],
   "_resolved": "github:caribviper/common#dde89144dd625ad9646eb4c3f90bf2faa495296e",
-  "_spec": "caribviper-common@github:caribviper/common",
+  "_spec": "github:caribviper/common",
   "_where": "C:\\Projects\\eplanning\\server-online\\node_modules_private",
   "author": {
     "name": "Kurtis Best",
@@ -53,5 +60,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "typings": "lib/index.d.ts",
-  "version": "0.5.6"
+  "version": "0.6.0"
 }

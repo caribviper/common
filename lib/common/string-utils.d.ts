@@ -25,4 +25,9 @@ export declare class StringUtilities {
      * @param showEllipseDots Specifies if to show the ellipose dots
      */
     static ellipse(value: string, length?: number, showEllipseDots?: boolean): string;
+    /**
+     * Creates an array with unique string values from another array returning the unique array
+     * @param array Array to be made unique
+     */
+    static createUniqueArray(array: string[]): string[];
 }

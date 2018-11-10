@@ -29,8 +29,8 @@ export class StringUtilities {
    */
   public static capitalize(value: string): string {
     if (value && typeof value === 'string') {
-    value = value.toLowerCase();
-    return value.replace(/\b\w/g, function (m) { return m.toUpperCase(); });
+      value = value.toLowerCase();
+      return value.replace(/\b\w/g, function (m) { return m.toUpperCase(); });
     }
     return value;
   }
@@ -47,5 +47,20 @@ export class StringUtilities {
       return value.length > length ? value.substring(0, length) + ellipseDots : value;
     }
     return value;
+  }
+
+  /**
+   * Creates an array with unique string values from another array returning the unique array
+   * @param array Array to be made unique
+   */
+  public static createUniqueArray(array: string[]): string[] {
+    let a = array.concat();
+    for (let i = 0; i < a.length; ++i) {
+      for (let j = i + 1; j < a.length; ++j) {
+        if (a[i] === a[j])
+          a.splice(j--, 1);
+      }
+    }
+    return a;
   }
 }
