@@ -1,4 +1,3 @@
-import { CategoryError } from './category-error';
 export class Assert {
   /**
    * Asserts whether the value passed is true
@@ -8,7 +7,7 @@ export class Assert {
    */
   public static isTrue(value: boolean, message: string, title: string = '') {
     if (value !== true)
-      throw new CategoryError(message, title);
+      throw !!title ? `${title}: ${message}` : message;
   }
 
   /**
@@ -19,7 +18,7 @@ export class Assert {
    */
   public static isFalse(value: boolean, message: string, title: string = '') {
     if (value !== false)
-      throw new CategoryError(message, title);
+      throw !!title ? `${title}: ${message}` : message;
   }
 
 
@@ -31,7 +30,7 @@ export class Assert {
    */
   public static isTruthy(value: any, message: string, title: string = '') {
     if (!value)
-      throw new CategoryError(message, title);
+      throw !!title ? `${title}: ${message}` : message;
   }
 
   /**
@@ -42,7 +41,7 @@ export class Assert {
    */
   public static isFalsey(value: any, message: string, title: string = '') {
     if (!!value)
-      throw new CategoryError(message, title);
+      throw !!title ? `${title}: ${message}` : message;
   }
 
   /**
@@ -53,6 +52,6 @@ export class Assert {
    */
   public static isNonEmptyArray(value: any[], message: string, title: string = '') {
     if (!value && value.length > 0)
-      throw new CategoryError(message, title);
+      throw !!title ? `${title}: ${message}` : message;
   }
 }
