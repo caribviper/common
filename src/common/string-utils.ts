@@ -63,4 +63,15 @@ export class StringUtilities {
     }
     return a;
   }
+
+  /**
+   * Pads a string with specified number of characters
+   * @param value Value to be padded
+   * @param size Number of charcters to pad
+   * @param leading Character to pad
+   */
+  public pad(value: string, size: number, character: string): string {
+    while (value.length < (size || 2)) {value = character + value;}
+    return value;
+  }
 }

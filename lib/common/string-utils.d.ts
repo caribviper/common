@@ -30,4 +30,11 @@ export declare class StringUtilities {
      * @param array Array to be made unique
      */
     static createUniqueArray(array: string[]): string[];
+    /**
+     * Pads a string with specified number of characters
+     * @param value Value to be padded
+     * @param size Number of charcters to pad
+     * @param leading Character to pad
+     */
+    pad(value: string, size: number, character: string): string;
 }
