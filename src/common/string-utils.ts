@@ -70,7 +70,7 @@ export class StringUtilities {
    * @param size Number of charcters to pad
    * @param leading Character to pad
    */
-  public pad(value: string, size: number, character: string): string {
+  public static pad(value: string, size: number, character: string): string {
     while (value.length < (size || 2)) {value = character + value;}
     return value;
   }

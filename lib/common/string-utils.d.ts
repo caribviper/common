@@ -36,5 +36,5 @@ export declare class StringUtilities {
      * @param size Number of charcters to pad
      * @param leading Character to pad
      */
-    pad(value: string, size: number, character: string): string;
+    static pad(value: string, size: number, character: string): string;
 }
